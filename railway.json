@@ -1,0 +1,9 @@
+{
+  "build": {
+    "command": "pnpm install && pnpm run build"
+  },
+  "start": {
+    "command": "pnpm run preview",
+    "port": 4173
+  }
+}
