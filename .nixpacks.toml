@@ -1,12 +1,11 @@
+[build]
+builder = "node"
+
 [phases.setup]
-nixPkgs = ["nodejs_18"]
+nixPkgs = ["nodejs_18", "pnpm"]
 
 [phases.build]
-cmds = [
-  "npm install -g pnpm",
-  "pnpm install",
-  "pnpm run build"
-]
+cmds = ["pnpm install", "pnpm run build"]
 
 [start]
 cmd = "npx serve dist -l 8080"
